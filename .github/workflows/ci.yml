@@ -6,7 +6,7 @@ jobs:
     steps:
         - name: uptime
           run: uptime
-        - name: check no of processors
+        - name: check number of processors
           run: nproc
   test:
     runs-on: ubuntu-latest
