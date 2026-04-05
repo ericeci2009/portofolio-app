@@ -1,12 +1,15 @@
 name: my first pipeline
+
 on: push
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+
         - name: uptime
           run: uptime
-        - name: check number of processors
+        - name: Number processor
           run: nproc
   test:
     runs-on: ubuntu-latest
