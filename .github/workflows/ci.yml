@@ -43,6 +43,7 @@ jobs:
           #port: ${{ secrets.PORT }}
           script: |
               docker rm -f portfolio || echo "Container not found, skipping removal"
+              docker rmi -f ${{secrets.DOCKER_USERNAME}}/ciportofolio || echo "image do not exist"
               docker run -d --name portfolio -p 8080:80 ${{secrets.DOCKER_USERNAME}}/ciportofolio        
         
          
